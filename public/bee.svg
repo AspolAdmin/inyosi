@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" fill="none" stroke="#3d3f41" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <filter id="pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.4 1.25" result="a"/>
+      <feComposite in="SourceGraphic" in2="a" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#grain)">
+  <g filter="url(#pencil)">
+    <!-- dashed flight path -->
+    <path d="M18 232 C 50 200, 40 170, 78 168" stroke-width="1.2" stroke-dasharray="2 7" opacity=".5"/>
+
+    <!-- wings (back) -->
+    <path d="M168 104 C 150 50, 190 18, 232 26 C 250 62, 222 100, 176 112 Z" stroke-width="1.6"/>
+    <path d="M168 104 C 158 66, 188 42, 220 40" stroke-width=".8" opacity=".6"/>
+    <path d="M182 96 C 190 70, 206 54, 226 48" stroke-width=".8" opacity=".5"/>
+    <!-- wing (front) -->
+    <path d="M150 106 C 112 66, 128 20, 170 14 C 196 48, 184 92, 156 112 Z" stroke-width="1.6"/>
+    <path d="M154 100 C 142 70, 152 44, 168 28" stroke-width=".8" opacity=".6"/>
+    <path d="M148 90 C 140 68, 146 48, 160 34" stroke-width=".8" opacity=".5"/>
+
+    <!-- abdomen -->
+    <path d="M118 140 C 118 104, 160 90, 208 104 C 252 118, 272 160, 262 182 C 250 206, 198 206, 158 186 C 130 172, 118 160, 118 140 Z" stroke-width="2"/>
+    <!-- stripes -->
+    <path d="M186 100 C 196 130, 192 168, 176 196" stroke-width="2"/>
+    <path d="M222 108 C 236 134, 234 166, 216 202" stroke-width="2"/>
+    <path d="M252 134 C 256 152, 254 172, 242 196" stroke-width="1.6"/>
+    <!-- stinger -->
+    <path d="M262 182 L 290 200 L 266 190" stroke-width="1.8"/>
+
+    <!-- thorax -->
+    <path d="M96 138 C 90 112, 124 96, 146 108 C 164 120, 160 160, 130 168 C 106 172, 98 156, 96 138 Z" stroke-width="2"/>
+    <!-- head -->
+    <circle cx="74" cy="148" r="24" stroke-width="2"/>
+    <circle cx="66" cy="142" r="5.5" stroke-width="1.8"/>
+    <circle cx="65" cy="141" r="2" fill="#3d3f41" stroke="none"/>
+    <path d="M58 160 C 66 168, 78 168, 86 160" stroke-width="1.4"/>
+    <!-- antennae -->
+    <path d="M62 126 C 52 100, 40 90, 28 86" stroke-width="1.5"/>
+    <circle cx="26" cy="86" r="3" stroke-width="1.4"/>
+    <path d="M78 125 C 80 98, 74 84, 66 74" stroke-width="1.5"/>
+    <circle cx="65" cy="72" r="3" stroke-width="1.4"/>
+    <!-- legs -->
+    <path d="M112 166 C 106 190, 100 204, 90 214" stroke-width="1.5"/>
+    <path d="M132 172 C 134 196, 132 210, 126 222" stroke-width="1.5"/>
+    <path d="M156 184 C 164 204, 168 214, 166 226" stroke-width="1.5"/>
+  </g>
+  <!-- graphite hatching: stripes, thorax fuzz, wing shading -->
+  <g filter="url(#pencil)" stroke-width=".9" opacity=".75">
+    <path d="M190 104 L 182 112 M193 114 L 183 128 M194 126 L 184 144 M194 138 L 183 160 M192 150 L 180 178 M188 164 L 178 190"/>
+    <path d="M226 112 L 218 126 M230 124 L 218 146 M231 138 L 218 166 M229 152 L 216 184 M225 168 L 216 198"/>
+    <path d="M254 140 L 248 156 M255 152 L 247 176"/>
+    <path d="M102 124 L 112 118 M100 134 L 118 124 M100 144 L 124 130 M102 154 L 130 138 M108 162 L 136 146 M118 168 L 142 152"/>
+    <path d="M122 120 L 118 128 M136 112 L 128 130 M148 114 L 140 136"/>
+    <path d="M214 34 L 206 52 M222 34 L 210 62 M228 44 L 214 74"/>
+    <path d="M150 30 L 142 46 M158 22 L 148 56"/>
+    <path d="M66 138 L 60 146 M70 134 L 62 152 M76 134 L 70 158 M82 138 L 80 162"/>
+  </g>
+  </g>
+</svg>
