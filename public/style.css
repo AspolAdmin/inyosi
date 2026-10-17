@@ -1,0 +1,74 @@
+/* inyosi — off-white institutional palette (mirrors aspol.com) */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-hero: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+
+  --font-body: 'Satoshi', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --color-bg:         #fbf6f1;
+  --color-border:     #e0dbd5;
+  --color-text:       #333638;
+  --color-text-muted: #7a7672;
+  --color-text-faint: #a09b96;
+  --color-heart:      #c4524a;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__greeting {
+  font-size: var(--text-hero);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.hero__heart { color: var(--color-heart); }
+
+.site-footer {
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.site-footer__contact,
+.site-footer__copy {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  color: var(--color-text-faint);
+  letter-spacing: 0.03em;
+}
+
+.site-footer__contact:hover { color: var(--color-text-muted); }

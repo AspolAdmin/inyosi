@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "inyosi",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./public" },
+  "routes": [
+    { "pattern": "inyosi.com", "custom_domain": true },
+    { "pattern": "www.inyosi.com", "custom_domain": true }
+  ]
+}
