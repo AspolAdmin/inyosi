@@ -15,3 +15,7 @@ Claude Code (edit locally) -> GitHub `AspolAdmin/inyosi` (public, branch `main`)
 - Deploy secrets (GitHub repo secrets): CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
 - Local deploy tooling is not installed (no node/wrangler); deploy happens in GitHub Actions.
 - Cloudflare skill for dashboard-driven deploys: rcc-cloudflare-deploy
+
+## Status / notes
+- First deploy done 2026-10-17 via Cloudflare API (no token available locally). Removed GoDaddy parking DNS: A 3.33.251.168, A 15.197.225.128, CNAME www -> inyosi.com. MX (secureserver.net), TXT and _domainconnect/ftp records left intact.
+- GitHub Actions deploy needs repo secrets CLOUDFLARE_API_TOKEN (Workers Scripts:Edit + Zone/DNS:Edit) and CLOUDFLARE_ACCOUNT_ID before pushes auto-deploy.
