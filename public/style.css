@@ -20,6 +20,8 @@
   --color-text-muted: #7a7672;
   --color-text-faint: #a09b96;
   --color-heart:      #c4524a;
+
+  --field-h: clamp(150px, 32vh, 300px);
 }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -44,14 +46,21 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: var(--space-6);
   text-align: center;
+  padding-bottom: var(--field-h);
 }
 
-.hero__bee {
-  width: clamp(190px, 28vw, 320px);
-  height: auto;
-  display: block;
-  opacity: 1;
+.field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.2s ease;
 }
+
+.field.is-ready { opacity: 1; }
 
 .hero__greeting {
   font-size: var(--text-hero);
