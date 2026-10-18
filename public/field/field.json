@@ -1,7 +1,8 @@
 {
- "flowers": [
+ "plants": [
   {
    "src": "flower-0.png",
+   "kind": "flower",
    "w": 164,
    "h": 450,
    "pivot": [
@@ -15,6 +16,7 @@
   },
   {
    "src": "flower-1.png",
+   "kind": "flower",
    "w": 146,
    "h": 458,
    "pivot": [
@@ -28,6 +30,7 @@
   },
   {
    "src": "flower-2.png",
+   "kind": "flower",
    "w": 138,
    "h": 457,
    "pivot": [
@@ -41,6 +44,7 @@
   },
   {
    "src": "flower-3.png",
+   "kind": "flower",
    "w": 122,
    "h": 482,
    "pivot": [
@@ -54,6 +58,7 @@
   },
   {
    "src": "flower-4.png",
+   "kind": "flower",
    "w": 225,
    "h": 467,
    "pivot": [
@@ -67,6 +72,7 @@
   },
   {
    "src": "flower-5.png",
+   "kind": "flower",
    "w": 134,
    "h": 456,
    "pivot": [
@@ -80,6 +86,7 @@
   },
   {
    "src": "flower-6.png",
+   "kind": "flower",
    "w": 179,
    "h": 457,
    "pivot": [
@@ -93,6 +100,7 @@
   },
   {
    "src": "flower-7.png",
+   "kind": "flower",
    "w": 199,
    "h": 456,
    "pivot": [
@@ -102,6 +110,230 @@
    "head": [
     0.496,
     0.135
+   ]
+  },
+  {
+   "src": "flower-8.png",
+   "kind": "flower",
+   "w": 193,
+   "h": 530,
+   "pivot": [
+    0.496,
+    1.0
+   ],
+   "head": [
+    0.463,
+    0.11
+   ]
+  },
+  {
+   "src": "flower-9.png",
+   "kind": "flower",
+   "w": 161,
+   "h": 453,
+   "pivot": [
+    0.557,
+    1.0
+   ],
+   "head": [
+    0.575,
+    0.123
+   ]
+  },
+  {
+   "src": "flower-10.png",
+   "kind": "flower",
+   "w": 178,
+   "h": 437,
+   "pivot": [
+    0.477,
+    1.0
+   ],
+   "head": [
+    0.534,
+    0.136
+   ]
+  },
+  {
+   "src": "flower-11.png",
+   "kind": "flower",
+   "w": 164,
+   "h": 411,
+   "pivot": [
+    0.532,
+    1.0
+   ],
+   "head": [
+    0.511,
+    0.111
+   ]
+  },
+  {
+   "src": "flower-12.png",
+   "kind": "flower",
+   "w": 156,
+   "h": 350,
+   "pivot": [
+    0.544,
+    1.0
+   ],
+   "head": [
+    0.396,
+    0.139
+   ]
+  },
+  {
+   "src": "flower-13.png",
+   "kind": "flower",
+   "w": 220,
+   "h": 407,
+   "pivot": [
+    0.467,
+    1.0
+   ],
+   "head": [
+    0.548,
+    0.15
+   ]
+  },
+  {
+   "src": "flower-14.png",
+   "kind": "flower",
+   "w": 162,
+   "h": 415,
+   "pivot": [
+    0.365,
+    1.0
+   ],
+   "head": [
+    0.514,
+    0.147
+   ]
+  },
+  {
+   "src": "flower-15.png",
+   "kind": "flower",
+   "w": 118,
+   "h": 287,
+   "pivot": [
+    0.45,
+    1.0
+   ],
+   "head": [
+    0.529,
+    0.135
+   ]
+  },
+  {
+   "src": "grass-0.png",
+   "kind": "grass",
+   "w": 239,
+   "h": 348,
+   "pivot": [
+    0.469,
+    1.0
+   ],
+   "head": [
+    0.518,
+    0.153
+   ]
+  },
+  {
+   "src": "grass-1.png",
+   "kind": "grass",
+   "w": 96,
+   "h": 541,
+   "pivot": [
+    0.418,
+    1.0
+   ],
+   "head": [
+    0.46,
+    0.129
+   ]
+  },
+  {
+   "src": "grass-2.png",
+   "kind": "grass",
+   "w": 192,
+   "h": 379,
+   "pivot": [
+    0.541,
+    1.0
+   ],
+   "head": [
+    0.735,
+    0.134
+   ]
+  },
+  {
+   "src": "grass-3.png",
+   "kind": "grass",
+   "w": 135,
+   "h": 363,
+   "pivot": [
+    0.386,
+    1.0
+   ],
+   "head": [
+    0.475,
+    0.147
+   ]
+  },
+  {
+   "src": "grass-4.png",
+   "kind": "grass",
+   "w": 205,
+   "h": 475,
+   "pivot": [
+    0.516,
+    1.0
+   ],
+   "head": [
+    0.508,
+    0.148
+   ]
+  },
+  {
+   "src": "grass-5.png",
+   "kind": "grass",
+   "w": 174,
+   "h": 218,
+   "pivot": [
+    0.45,
+    1.0
+   ],
+   "head": [
+    0.542,
+    0.155
+   ]
+  },
+  {
+   "src": "grass-6.png",
+   "kind": "grass",
+   "w": 103,
+   "h": 463,
+   "pivot": [
+    0.484,
+    1.0
+   ],
+   "head": [
+    0.366,
+    0.137
+   ]
+  },
+  {
+   "src": "grass-7.png",
+   "kind": "grass",
+   "w": 193,
+   "h": 520,
+   "pivot": [
+    0.44,
+    1.0
+   ],
+   "head": [
+    0.624,
+    0.127
    ]
   }
  ],

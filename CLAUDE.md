@@ -1,13 +1,13 @@
 # inyosi.com
 
-Static home page for inyosi.com ("Hello B ♥" + mailto b@inyosi.com), styled after aspol.com (warm off-white, Satoshi + JetBrains Mono). An animated pencil flower field sits at the bottom with bees flying flower to flower; moving the pointer over the field (or tapping it on a phone) calls the nearest bee, which lands on the flower nearest the pointer.
+Static home page for inyosi.com (a pulsing ♥ + mailto b@inyosi.com; the "Hello B" text was removed 2026-10-18 at Cameron's request), styled after aspol.com (warm off-white, Satoshi + JetBrains Mono). An animated pencil meadow sits at the bottom: five depth rows of 16 flower species and 8 grasses (back rows smaller, paler, higher). Bees fly in depth too (they shrink/fade going away, nearer plants hide them) and land flower to flower; moving the pointer over the field (or tapping it on a phone) calls the nearest bee, which lands on the flower nearest the pointer.
 
 ## Pipeline
 Claude Code (edit locally) -> GitHub `AspolAdmin/inyosi` (public, branch `main`) -> Cloudflare Workers Builds (connected to the repo in the dashboard; builds on every push to main) -> Cloudflare Worker `inyosi` (static assets from `public/`) -> custom domains inyosi.com, www.inyosi.com (see `wrangler.jsonc`).
 
 ## Layout
 - `public/` – the site (index.html, style.css, favicon.svg, field.js = canvas animation)
-- `public/field/` – transparent sprites (flower-0..7.png, bee-up/down.png wing frames) + field.json (sizes, sway pivots, landing points)
+- `public/field/` – transparent sprites (flower-0..15.png, grass-0..7.png, bee-up/down.png wing frames) + field.json (sizes, sway pivots, landing points)
 - `tools/` – gen.py (generate art via OpenRouter), edit.py (image edit, e.g. wing frame), process.py (cut art into sprites + field.json; needs Pillow + NumPy)
 - `art/` – raw model outputs + compare.html (git-ignored; kept on Google Drive only)
 - `wrangler.jsonc` – Worker name, assets dir, custom domains
@@ -22,7 +22,7 @@ Claude Code (edit locally) -> GitHub `AspolAdmin/inyosi` (public, branch `main`)
 ## Art generation (OpenRouter)
 - Key: macOS Keychain on the Mac mini, service `openrouter` (read with `security find-generic-password -s openrouter -w`; never print or commit it). The dc-research bridge on the MacBook Pro uses the same Keychain name.
 - Account enforces ZDR, which blocks OpenAI and Nano Banana image endpoints; the Google gemini-*-image models work.
-- Chosen art: flowers from google/gemini-3-pro-image, bee from google/gemini-3.1-flash-image, wing down-stroke via edit with gemini-3-pro-image. Spend so far ~$0.63; cap agreed with Cameron for this work: $10.
+- Chosen art: flowers (flowers.png + flowers2.png) and grasses from google/gemini-3-pro-image, bee from google/gemini-3.1-flash-image, wing down-stroke via edit with gemini-3-pro-image. Spend so far ~$0.91; cap agreed with Cameron for this work: $10.
 - Regenerate sprites: `python3 tools/process.py art public/field` (in a venv with pillow numpy).
 
 ## Status / notes
