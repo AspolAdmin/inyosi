@@ -141,12 +141,14 @@
 
   function makeBees() {
     var n = W < 600 ? 3 : W < 1100 ? 4 : 6;
+    // start each bee perched on a random flower, taking off at staggered times
     for (var i = 0; i < n; i++) {
+      var fl = randomFlower();
       bees.push({
-        x: rand(0, W), y: rand(H * 0.2, ground - fieldH), z: Math.random(),
-        vx: rand(-30, 30), vy: rand(-20, 20), vz: 0,
-        state: 'fly', flower: randomFlower(), waypoint: null, rest: 0,
-        face: 1, tilt: 0, wing: 0, wobble: Math.random() * 100, speed: rand(90, 130)
+        x: fl ? fl.x : rand(0, W), y: fl ? baseY(fl) : ground - fieldH * 0.5, z: fl ? fl.z : Math.random(),
+        vx: 0, vy: 0, vz: 0,
+        state: fl ? 'rest' : 'fly', flower: fl, waypoint: null, rest: rand(0.4, 6),
+        face: Math.random() < 0.5 ? 1 : -1, tilt: 0, wing: 0, wobble: Math.random() * 100, speed: rand(90, 130)
       });
     }
   }
