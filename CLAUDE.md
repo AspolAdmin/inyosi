@@ -1,6 +1,6 @@
 # inyosi.com
 
-Static home page for inyosi.com (a pulsing ♥ + mailto b@inyosi.com; the "Hello B" text was removed 2026-10-18 at Cameron's request), styled after aspol.com (warm off-white, Satoshi + JetBrains Mono). An animated pencil meadow sits at the bottom: five depth rows of 16 flower species and 8 grasses (back rows smaller, paler, higher). Bees fly in depth too (they shrink/fade going away, nearer plants hide them) and land flower to flower; moving the pointer over the field (or tapping it on a phone) calls the nearest bee, which lands on the flower nearest the pointer.
+Static home page for inyosi.com (a pulsing ♥ + mailto hello@inyosi.com; the "Hello B" text was removed 2026-10-18 at Cameron's request), styled after aspol.com (warm off-white, Satoshi + JetBrains Mono). An animated pencil meadow sits at the bottom: five depth rows of 16 flower species and 8 grasses (back rows smaller, paler, higher). Bees fly in depth too (they shrink/fade going away, nearer plants hide them) and land flower to flower; moving the pointer over the field (or tapping it on a phone) calls the nearest bee, which lands on the flower nearest the pointer.
 
 ## Pipeline
 Claude Code (edit locally) -> GitHub `AspolAdmin/inyosi` (public, branch `main`) -> Cloudflare Workers Builds (connected to the repo in the dashboard; builds on every push to main) -> Cloudflare Worker `inyosi` (static assets from `public/`) -> custom domains inyosi.com, www.inyosi.com (see `wrangler.jsonc`).
